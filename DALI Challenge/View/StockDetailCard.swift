@@ -18,6 +18,7 @@ struct StockDetailCard: View {
     var body: some View {
         
         ZStack {
+            Color(#colorLiteral(red: 0.9725490196, green: 0.9803921569, blue: 1, alpha: 1)).edgesIgnoringSafeArea(.all)
             GradientRect()
             
             
@@ -29,43 +30,44 @@ struct StockDetailCard: View {
                 LineView(data: self.stockList.IntradayPrices, style: chartStyle)
                     .frame(width: 300)
                 
-                ExtractedView(stock: stock)
+                QuoteView(stock: stock)
                 
-                VStack {
+                VStack(alignment: .leading, spacing: 20.0) {
                     if self.stockList.companySentiment.count > 0 {
                         HStack {
-                            Text("Bearish Percent: ") + Text(String(self.stockList.companySentiment[0].sentiment.bearishPercent))
+                            Text("Bearish Percent: ")
+                                .fontWeight(.light)
+                                .foregroundColor(Color("LightText"))
+                            Text(String(self.stockList.companySentiment[0].sentiment.bearishPercent))
+                            Spacer()
                         }
                         HStack {
-                            Text("Bullish Percent: ") + Text(String(self.stockList.companySentiment[0].sectorAverageBullishPercent))
+                            Text("Bullish Percent: ")
+                                .fontWeight(.light)
+                                .foregroundColor(Color("LightText"))
+                            Text(String(self.stockList.companySentiment[0].sectorAverageBullishPercent))
+                            Spacer()
                         }
                         
                     }
                 }
-                
-                
             }
-            
-            .frame(width: UIScreen.main.bounds.width-80, height: 500, alignment: .center)
+            .frame(width: UIScreen.main.bounds.width-80, height: 550, alignment: .center)
             .padding([.leading, .bottom, .trailing], 25.0)
             .padding(.top, 25.0)
             .background(Color.white)
             .cornerRadius(30.0)
-            .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.12999999523162842)), radius:59, x:0, y:4)
-            .offset(y: -50)
+            .shadow(color: Color(#colorLiteral(red: 0.7551975846, green: 0.7855095267, blue: 0.8625398874, alpha: 0.4)), radius:59, x:0, y:4)
+            //.offset(y: -20)
 
         }
         .edgesIgnoringSafeArea(.vertical)
         .onAppear {
             self.stockList.fetchIntradayPrices(ticker: self.stock.symbol) { () -> () in
                 self.stockList.companySentiments(ticker: self.stock.symbol) { () -> () in
-                    print(self.stockList.companySentiment)
                 }
-                
             }
-            
         }
-        
     }
 }
 
@@ -125,22 +127,22 @@ struct GradientRect: View {
                     startPoint: UnitPoint(x: 0, y: -0.09),
                     endPoint: UnitPoint(x: 1.1, y: 1.12)))
             .frame(width: 420, height: 250)
-            .offset(y: -350)
+            .offset(y: -320)
     }
 }
 
-struct ExtractedView: View {
+struct QuoteView: View {
     let stock: StockItemVM
 
     var body: some View {
-        HStack(spacing: 40.0) {
+        HStack() {
             VStack(alignment: .leading) {
                 HStack {
                     Text("High:")
                         .fontWeight(.light)
                         .foregroundColor(Color("LightText"))
                     Text(String(stock.high ?? 0.0))
-                    
+                    Spacer()
                 }.padding(.bottom)
                 
                 HStack {
@@ -148,6 +150,7 @@ struct ExtractedView: View {
                         .fontWeight(.light)
                         .foregroundColor(Color("LightText"))
                     Text(String(stock.low ?? 0.0))
+                    Spacer()
                 }
             }
             VStack(alignment: .leading) {
@@ -157,6 +160,7 @@ struct ExtractedView: View {
                         .fontWeight(.light)
                         .foregroundColor(Color("LightText"))
                     Text(stock.week52High)
+                    Spacer()
                 }.padding(.bottom)
                 
                 HStack {
@@ -164,8 +168,9 @@ struct ExtractedView: View {
                         .fontWeight(.light)
                         .foregroundColor(Color("LightText"))
                     Text(stock.week52Low)
+                    Spacer()
                 }
             }
-        }.offset(y: -35)
+        }.offset(y: -40)
     }
 }
