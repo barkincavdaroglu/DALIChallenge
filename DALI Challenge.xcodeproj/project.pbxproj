@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		296034D7253E2667004BB603 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296034D6253E2667004BB603 /* AppDelegate.swift */; };
+		296034D9253E2667004BB603 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296034D8253E2667004BB603 /* SceneDelegate.swift */; };
+		296034DB253E2667004BB603 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296034DA253E2667004BB603 /* ContentView.swift */; };
+		296034DD253E2668004BB603 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 296034DC253E2668004BB603 /* Assets.xcassets */; };
+		296034E0253E2668004BB603 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 296034DF253E2668004BB603 /* Preview Assets.xcassets */; };
+		296034E3253E2668004BB603 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 296034E1253E2668004BB603 /* LaunchScreen.storyboard */; };
+		296034EE253E26D2004BB603 /* StockNewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296034EC253E26D2004BB603 /* StockNewsData.swift */; };
+		296034EF253E26D2004BB603 /* IEXStockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296034ED253E26D2004BB603 /* IEXStockData.swift */; };
+		296034F3253E26E3004BB603 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296034F2253E26E3004BB603 /* NetworkRequest.swift */; };
+		296034FA253E26EC004BB603 /* StockCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296034F6253E26EC004BB603 /* StockCard.swift */; };
+		296034FB253E26EC004BB603 /* StockDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296034F7253E26EC004BB603 /* StockDetailCard.swift */; };
+		296034FC253E26EC004BB603 /* SafariNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296034F8253E26EC004BB603 /* SafariNewsView.swift */; };
+		296034FD253E26EC004BB603 /* StocksLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296034F9253E26EC004BB603 /* StocksLists.swift */; };
+		29603503253E26F0004BB603 /* StockItemVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29603500253E26F0004BB603 /* StockItemVM.swift */; };
+		29603504253E26F0004BB603 /* ListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29603501253E26F0004BB603 /* ListVM.swift */; };
+		29603505253E26F0004BB603 /* NewsItemVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29603502253E26F0004BB603 /* NewsItemVM.swift */; };
+		29603509253E2751004BB603 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 29603508253E2751004BB603 /* Alamofire */; };
+		2960350D253E2771004BB603 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2960350C253E2771004BB603 /* SDWebImageSwiftUI */; };
+		29603511253E2787004BB603 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 29603510253E2787004BB603 /* SwiftUICharts */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		296034D3253E2667004BB603 /* DALI Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DALI Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		296034D6253E2667004BB603 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		296034D8253E2667004BB603 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		296034DA253E2667004BB603 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		296034DC253E2668004BB603 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		296034DF253E2668004BB603 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		296034E2253E2668004BB603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		296034E4253E2668004BB603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		296034EC253E26D2004BB603 /* StockNewsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockNewsData.swift; sourceTree = "<group>"; };
+		296034ED253E26D2004BB603 /* IEXStockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IEXStockData.swift; sourceTree = "<group>"; };
+		296034F2253E26E3004BB603 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		296034F6253E26EC004BB603 /* StockCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockCard.swift; sourceTree = "<group>"; };
+		296034F7253E26EC004BB603 /* StockDetailCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockDetailCard.swift; sourceTree = "<group>"; };
+		296034F8253E26EC004BB603 /* SafariNewsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariNewsView.swift; sourceTree = "<group>"; };
+		296034F9253E26EC004BB603 /* StocksLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StocksLists.swift; sourceTree = "<group>"; };
+		29603500253E26F0004BB603 /* StockItemVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockItemVM.swift; sourceTree = "<group>"; };
+		29603501253E26F0004BB603 /* ListVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVM.swift; sourceTree = "<group>"; };
+		29603502253E26F0004BB603 /* NewsItemVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItemVM.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		296034D0253E2667004BB603 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29603511253E2787004BB603 /* SwiftUICharts in Frameworks */,
+				2960350D253E2771004BB603 /* SDWebImageSwiftUI in Frameworks */,
+				29603509253E2751004BB603 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		296034CA253E2667004BB603 = {
+			isa = PBXGroup;
+			children = (
+				296034D5253E2667004BB603 /* DALI Challenge */,
+				296034D4253E2667004BB603 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		296034D4253E2667004BB603 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				296034D3253E2667004BB603 /* DALI Challenge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		296034D5253E2667004BB603 /* DALI Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				296034EB253E26D2004BB603 /* Model */,
+				296034D6253E2667004BB603 /* AppDelegate.swift */,
+				296034F1253E26E3004BB603 /* Requests */,
+				296034D8253E2667004BB603 /* SceneDelegate.swift */,
+				296034F5253E26EC004BB603 /* View */,
+				296034DA253E2667004BB603 /* ContentView.swift */,
+				296034FF253E26F0004BB603 /* ViewModels */,
+				296034DC253E2668004BB603 /* Assets.xcassets */,
+				296034E1253E2668004BB603 /* LaunchScreen.storyboard */,
+				296034E4253E2668004BB603 /* Info.plist */,
+				296034DE253E2668004BB603 /* Preview Content */,
+			);
+			path = "DALI Challenge";
+			sourceTree = "<group>";
+		};
+		296034DE253E2668004BB603 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				296034DF253E2668004BB603 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		296034EB253E26D2004BB603 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				296034EC253E26D2004BB603 /* StockNewsData.swift */,
+				296034ED253E26D2004BB603 /* IEXStockData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		296034F1253E26E3004BB603 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				296034F2253E26E3004BB603 /* NetworkRequest.swift */,
+			);
+			name = Requests;
+			path = "DALI Challenge/Requests";
+			sourceTree = SOURCE_ROOT;
+		};
+		296034F5253E26EC004BB603 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				296034F6253E26EC004BB603 /* StockCard.swift */,
+				296034F7253E26EC004BB603 /* StockDetailCard.swift */,
+				296034F8253E26EC004BB603 /* SafariNewsView.swift */,
+				296034F9253E26EC004BB603 /* StocksLists.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		296034FF253E26F0004BB603 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				29603500253E26F0004BB603 /* StockItemVM.swift */,
+				29603501253E26F0004BB603 /* ListVM.swift */,
+				29603502253E26F0004BB603 /* NewsItemVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		296034D2253E2667004BB603 /* DALI Challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 296034E7253E2668004BB603 /* Build configuration list for PBXNativeTarget "DALI Challenge" */;
+			buildPhases = (
+				296034CF253E2667004BB603 /* Sources */,
+				296034D0253E2667004BB603 /* Frameworks */,
+				296034D1253E2667004BB603 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DALI Challenge";
+			packageProductDependencies = (
+				29603508253E2751004BB603 /* Alamofire */,
+				2960350C253E2771004BB603 /* SDWebImageSwiftUI */,
+				29603510253E2787004BB603 /* SwiftUICharts */,
+			);
+			productName = "DALI Challenge";
+			productReference = 296034D3253E2667004BB603 /* DALI Challenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		296034CB253E2667004BB603 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					296034D2253E2667004BB603 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = 296034CE253E2667004BB603 /* Build configuration list for PBXProject "DALI Challenge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 296034CA253E2667004BB603;
+			packageReferences = (
+				29603507253E2751004BB603 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2960350B253E2771004BB603 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				2960350F253E2787004BB603 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
+			productRefGroup = 296034D4253E2667004BB603 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				296034D2253E2667004BB603 /* DALI Challenge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		296034D1253E2667004BB603 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				296034E3253E2668004BB603 /* LaunchScreen.storyboard in Resources */,
+				296034E0253E2668004BB603 /* Preview Assets.xcassets in Resources */,
+				296034DD253E2668004BB603 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		296034CF253E2667004BB603 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29603503253E26F0004BB603 /* StockItemVM.swift in Sources */,
+				296034D7253E2667004BB603 /* AppDelegate.swift in Sources */,
+				296034FB253E26EC004BB603 /* StockDetailCard.swift in Sources */,
+				296034FD253E26EC004BB603 /* StocksLists.swift in Sources */,
+				296034EE253E26D2004BB603 /* StockNewsData.swift in Sources */,
+				296034EF253E26D2004BB603 /* IEXStockData.swift in Sources */,
+				29603504253E26F0004BB603 /* ListVM.swift in Sources */,
+				296034FA253E26EC004BB603 /* StockCard.swift in Sources */,
+				29603505253E26F0004BB603 /* NewsItemVM.swift in Sources */,
+				296034D9253E2667004BB603 /* SceneDelegate.swift in Sources */,
+				296034F3253E26E3004BB603 /* NetworkRequest.swift in Sources */,
+				296034DB253E2667004BB603 /* ContentView.swift in Sources */,
+				296034FC253E26EC004BB603 /* SafariNewsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		296034E1253E2668004BB603 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				296034E2253E2668004BB603 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		296034E5253E2668004BB603 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		296034E6253E2668004BB603 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		296034E8253E2668004BB603 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"DALI Challenge/Preview Content\"";
+				DEVELOPMENT_TEAM = C5SQ26QF5Y;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "DALI Challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cavdaroglubarkin.DALI-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		296034E9253E2668004BB603 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"DALI Challenge/Preview Content\"";
+				DEVELOPMENT_TEAM = C5SQ26QF5Y;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "DALI Challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cavdaroglubarkin.DALI-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		296034CE253E2667004BB603 /* Build configuration list for PBXProject "DALI Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				296034E5253E2668004BB603 /* Debug */,
+				296034E6253E2668004BB603 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		296034E7253E2668004BB603 /* Build configuration list for PBXNativeTarget "DALI Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				296034E8253E2668004BB603 /* Debug */,
+				296034E9253E2668004BB603 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		29603507253E2751004BB603 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.0;
+			};
+		};
+		2960350B253E2771004BB603 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+		2960350F253E2787004BB603 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		29603508253E2751004BB603 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29603507253E2751004BB603 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		2960350C253E2771004BB603 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2960350B253E2771004BB603 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		29603510253E2787004BB603 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2960350F253E2787004BB603 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 296034CB253E2667004BB603 /* Project object */;
+}
