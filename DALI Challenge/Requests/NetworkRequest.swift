@@ -14,7 +14,7 @@ class NetworkRequest: ObservableObject {
     var namesArray = [String]()
     var newscorpus = NewsCorpus(corpus: "")
     
-    //MARK: -Get news of the market
+    //MARK: - Get news of the market
     func fetchMarketNews(completion: @escaping (([NewsItem]?) -> Void)) {
         _ = AF.request("https://finnhub.io/api/v1/news?category=general&token=bu5j1sn48v6qku33vlig")
                 .responseDecodable(of: [NewsItem].self) { (response) in
@@ -31,6 +31,8 @@ class NetworkRequest: ObservableObject {
                 }
     }
     
+    //MARK: - Analyze all of the summaries we received for market news and determine its value
+    // Range: -1 negative to 1 positive
     func marketSentiment(completion: @escaping ((String?) -> Void)) {
         let tagger = NLTagger(tagSchemes: [.sentimentScore])
         tagger.string = self.newscorpus.corpus
@@ -39,6 +41,7 @@ class NetworkRequest: ObservableObject {
         completion(score)
     }
     
+    //MARK: - Fetches Intraday prices for the ticker user clicked on on homepage
     func fetchIntradayPrices(ticker: String, completion: @escaping (([Intraday]?) -> Void)) {
         _ = AF.request("https://cloud.iexapis.com/stable/stock/"+ticker+"/intraday-prices?token=pk_67f3433c071f4436a63a849f80c418bf&chartInterval=15")
             .responseDecodable(of: [Intraday].self) { (response) in
@@ -48,15 +51,17 @@ class NetworkRequest: ObservableObject {
             }
     }
     
+    //MARK: - Gets market sentiments for a specific ticker
     func companySentiment(ticker: String, completion: @escaping ((CompanyNewsSentiment?) -> Void)) {
         _ = AF.request("https://finnhub.io/api/v1/news-sentiment?symbol="+ticker+"&token=bu5j1sn48v6qku33vlig")
             .responseDecodable(of: CompanyNewsSentiment.self) { (response) in
                 guard let data = response.value else { return }
+                print(data)
                 completion(data)
             }
     }
     
-    //MARK: - Get Data from IEXCloud
+    //MARK: - Get Quote Data from IEXCloud for popular tickers from Yahoo
     func fetchDataIEX(completion: @escaping (([Quote]?) -> Void)) {
         var stocks = [Quote]()
         for each in self.symbolsArray {
@@ -71,10 +76,12 @@ class NetworkRequest: ObservableObject {
     }
     
     
-    //MARK: - Get Popular Symbols from Yahoo Finance
+    //MARK: - Scrapes yahoo.finance for popular tickers
+    // This is not efficient.
     func getPopularTickers(completion: @escaping () -> Void) {
         let url = URL(string: "https://finance.yahoo.com/trending-tickers/")!
         
+        // 1) The function gets the html.
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else {
                 print("error with the data")
@@ -94,6 +101,7 @@ class NetworkRequest: ObservableObject {
         </tbody>
         """
             
+            // 2) Removes everything except the section starting with <tbody and ending with </tbody>
             guard
                 let leftSideRange = htmlString.range(of: leftSideString)
             else {
@@ -109,16 +117,19 @@ class NetworkRequest: ObservableObject {
             
             let rangeOfTheData = leftSideRange.upperBound..<rightSideRange.lowerBound
             let tableOfTickers = htmlString[rangeOfTheData]
-            let abaa = Array(tableOfTickers)
+            let charArray = Array(tableOfTickers)
             var line = ""
             var lines = [""]
             var wearein = false
+            
+            // If the next 2 characters are <t then start forming the string from which we will get the ticker
+            // If the next character is > then stop forming the string and add it to the list of ticker array
             for (index, character) in tableOfTickers.enumerated() {
-                if abaa[index] == "<" && abaa[index+1] == "t" && abaa[index+2] == "r" && abaa[index+3] == " " {
+                if charArray[index] == "<" && charArray[index+1] == "t" && charArray[index+2] == "r" && charArray[index+3] == " " {
                     wearein = true
                 }
                 
-                if abaa[index] == ">" {
+                if charArray[index] == ">" {
                     wearein = false
                     lines.append(line)
                     line = ""
@@ -135,7 +146,8 @@ class NetworkRequest: ObservableObject {
                     newLines.append(lines[lineIndex])
                 }
             }
-            
+            // If the next 4 characters are -row then start forming the string from which we will get the ticker
+            // If the next 4 characters are  Bgc then stop forming the string and add it to the list of ticker array
             var wearin2 = false
             var symbolz = ""
             var symbolls = [""]
@@ -183,4 +195,5 @@ extension String {
          return String(self[start...])
     }
 }
+
 
